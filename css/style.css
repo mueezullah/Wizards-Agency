@@ -1125,6 +1125,78 @@ body::after {
   }
 }
 
+/* ========================
+   18. MEDIA LOADERS
+   ======================== */
+.work-card__media,
+.showreel-video-wrap {
+  position: relative;
+  background: var(--surface);
+}
+
+/* Base transitions for smooth fade-in */
+.work-card__media img,
+.work-card__media video {
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.3, 1), transform 0.8s var(--ease-out-expo);
+}
+
+.showreel-video-wrap video {
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.3, 1), width 0.01s linear;
+}
+
+/* Loading states */
+.work-card__media.media-loading img,
+.work-card__media.media-loading video,
+.showreel-video-wrap.media-loading video {
+  opacity: 0 !important;
+}
+
+.work-card__media.is-loaded img,
+.work-card__media.is-loaded video,
+.showreel-video-wrap.is-loaded video {
+  opacity: 1 !important;
+}
+
+/* Media Loader Overlay */
+.media-loader {
+  position: absolute;
+  inset: 0;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.3, 1), visibility 0.5s ease;
+}
+
+.media-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Premium spinner design */
+.media-loader-spinner {
+  width: 44px;
+  height: 44px;
+  border: 2.5px solid rgba(237, 191, 255, 0.1);
+  border-top: 2.5px solid var(--accent);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+  animation: media-loader-spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+@keyframes media-loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

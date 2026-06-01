@@ -630,10 +630,73 @@
   }
 
   // ========================
+  // 7d. MEDIA LOADERS
+  // ========================
+  function initMediaLoaders() {
+    const mediaContainers = document.querySelectorAll(
+      ".work-card__media, .showreel-video-wrap"
+    );
+
+    mediaContainers.forEach(function (container) {
+      const mediaElement = container.querySelector("img, video");
+      if (!mediaElement) return;
+
+      // Add loading state class immediately
+      container.classList.add("media-loading");
+
+      // Create loader overlay HTML dynamically
+      const loader = document.createElement("div");
+      loader.className = "media-loader";
+      loader.innerHTML = '<div class="media-loader-spinner"></div>';
+      container.appendChild(loader);
+
+      // Helper function to remove loader and show media with transition
+      function handleMediaLoaded() {
+        if (container.classList.contains("is-loaded")) return;
+
+        container.classList.remove("media-loading");
+        container.classList.add("is-loaded");
+        loader.classList.add("fade-out");
+
+        // Clean up the loader element from DOM after transition completes
+        setTimeout(function () {
+          if (loader.parentNode) {
+            loader.parentNode.removeChild(loader);
+          }
+        }, 600);
+      }
+
+      // Check if image or video
+      if (mediaElement.tagName.toLowerCase() === "img") {
+        // Image loading logic
+        if (mediaElement.complete) {
+          handleMediaLoaded();
+        } else {
+          mediaElement.addEventListener("load", handleMediaLoaded);
+          mediaElement.addEventListener("error", handleMediaLoaded);
+        }
+      } else if (mediaElement.tagName.toLowerCase() === "video") {
+        // Video loading logic
+        if (mediaElement.readyState >= 2) {
+          handleMediaLoaded();
+        } else {
+          mediaElement.addEventListener("loadeddata", handleMediaLoaded);
+          mediaElement.addEventListener("canplay", handleMediaLoaded);
+          mediaElement.addEventListener("error", handleMediaLoaded);
+          
+          // Fallback in case loading gets stuck or slow connection fails
+          setTimeout(handleMediaLoaded, 8000);
+        }
+      }
+    });
+  }
+
+  // ========================
   // 8. INITIALIZE EVERYTHING
   // ========================
   function init() {
     gsap.registerPlugin(ScrollTrigger);
+    initMediaLoaders();
     initLenis();
     initNavbar();
     initMobileMenu();

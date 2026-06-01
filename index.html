@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wizard's Studio | Digital Design & Development</title>
+  <meta name="description"
+    content="Wizard's Studio — A creative studio by WizardX specializing in web development, UI/UX design, branding, and animation." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- ============ PRELOADER ============ -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-brand">Wizard X</div>
+      <div class="preloader-bottom">
+        <span class="preloader-tagline">Crafting Digital Experiences</span>
+        <div class="preloader-counter">
+          <span class="counter-number">0</span><span>%</span>
+        </div>
+      </div>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav id="navbar" class="navbar">
+    <a href="#" class="nav-logo">WizardX</a>
+    <div class="nav-links">
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="nav-dot-indicator" title="Available for work"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main-wrapper">
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="section hero">
+      <div class="hero-content">
+        <div class="hero-title">
+          <div class="line-wrap">
+            <h1 class="hero-line hero-line-1">We craft digital</h1>
+          </div>
+          <div class="line-wrap">
+            <h1 class="hero-line hero-line-2">experiences that</h1>
+          </div>
+          <div class="line-wrap">
+            <h1 class="hero-line hero-line-3"><em>captivate</em></h1>
+          </div>
+        </div>
+        <div class="hero-meta">
+          <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+          </div>
+          <p class="hero-description">
+            A creative studio by <strong>Wizard X</strong> — specializing
+            in web development, UI/UX design, branding, and animation. We
+            transform ideas into immersive digital experiences.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SHOWREEL ===== -->
+    <section id="showreel" class="section showreel">
+      <div class="showreel-video-wrap">
+        <video muted loop playsinline src="./assets/videos/14519250_3840_2160_25fps.mp4"></video>
+        <div class="showreel-overlay">
+          <span class="showreel-label">SHOWREEL 2024</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section about">
+      <div class="about-label">
+        <h2 class="section-label">About the Studio</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h3 class="about-statement">
+            A creative force<br />dedicated to unlocking<br />your brand's
+            <span class="accent">full potential</span>
+          </h3>
+        </div>
+        <div class="about-right">
+          <p>
+            We weave together bold strategy and creative execution to produce
+            thought-provoking digital experiences. We take a highly
+            personalized approach to delivering web development, UI/UX design,
+            branding, and animation solutions.
+          </p>
+          <p>
+            Every pixel, every interaction, every animation is crafted with
+            intention. We don't just build websites — we build experiences
+            that leave lasting impressions.
+          </p>
+          <a href="#contact" class="btn btn-primary">
+            <span>Get in Touch</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section services">
+      <h2 class="section-label">What We Do</h2>
+      <div class="services-list">
+        <div class="service-row" data-image="assets/images/proj1.webp">
+          <span class="service-idx">01</span>
+          <h3 class="service-name">Web Development</h3>
+          <p class="service-desc">
+            Performant, responsive websites with cutting-edge tech
+          </p>
+          <span class="service-arrow">&#8599;</span>
+        </div>
+        <div class="service-row" data-image="assets/images/proj2.webp">
+          <span class="service-idx">02</span>
+          <h3 class="service-name">UI/UX Design</h3>
+          <p class="service-desc">
+            Intuitive interfaces that delight at every touchpoint
+          </p>
+          <span class="service-arrow">&#8599;</span>
+        </div>
+        <div class="service-row" data-image="assets/images/proj3.webp">
+          <span class="service-idx">03</span>
+          <h3 class="service-name">Branding</h3>
+          <p class="service-desc">
+            Distinctive identities that resonate and endure
+          </p>
+          <span class="service-arrow">&#8599;</span>
+        </div>
+        <div class="service-row" data-image="assets/images/proj4.webp">
+          <span class="service-idx">04</span>
+          <h3 class="service-name">Animation</h3>
+          <p class="service-desc">
+            Bringing experiences to life with purposeful motion
+          </p>
+          <span class="service-arrow">&#8599;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED WORK ===== -->
+    <section id="work" class="section work">
+      <h2 class="section-label">Featured Work</h2>
+      <div class="work-grid">
+        <article class="work-card work-card--wide">
+          <div class="work-card__media">
+            <img src="assets/images/1.jpg" alt="Meridian — Brand Identity" />
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__tag">BRAND IDENTITY</span>
+            <h3 class="work-card__title">Project 1</h3>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-card__media">
+            <img src="assets/images/2.jpg" alt="Meridian — Brand Identity" />
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__tag">WEB APPLICATION</span>
+            <h3 class="work-card__title">Project 2</h3>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-card__media">
+            <img src="assets/images/3.jpg" alt="Meridian — Brand Identity" />
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__tag">UI/UX DESIGN</span>
+            <h3 class="work-card__title">Project 3</h3>
+          </div>
+        </article>
+        <article class="work-card work-card--wide">
+          <div class="work-card__media">
+            <img src="assets/images/4.jpg" alt="Lumina — Motion Design" />
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__tag">MOTION DESIGN</span>
+            <h3 class="work-card__title">Project 4</h3>
+          </div>
+        </article>
+      </div>
+      <div class="work-more">
+        <a href="#" class="btn btn-outline">
+          <span>View All Projects</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTS ===== -->
+    <section id="clients" class="section clients">
+      <h2 class="section-label">
+        <span class="accent">Recognition</span> & Clients
+      </h2>
+      <div class="clients-list">
+        <div class="client-row" data-image="assets/images/proj1.webp">
+          <span class="client-name">Meridian Corp</span>
+          <span class="client-year">2024</span>
+        </div>
+        <div class="client-row" data-image="assets/images/proj2.webp">
+          <span class="client-name">Awwwards — SOTD</span>
+          <span class="client-year">2023</span>
+        </div>
+        <div class="client-row" data-image="assets/images/proj3.webp">
+          <span class="client-name">CSS Design Awards</span>
+          <span class="client-year">2023</span>
+        </div>
+        <div class="client-row" data-image="assets/images/proj4.webp">
+          <span class="client-name">Vertex Labs</span>
+          <span class="client-year">2022</span>
+        </div>
+        <div class="client-row" data-image="assets/images/proj5.webp">
+          <span class="client-name">Pulse Digital</span>
+          <span class="client-year">2022</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact" class="section footer">
+      <div class="footer-cta">
+        <p class="footer-eyebrow">Have a project in mind?</p>
+        <h2 class="footer-headline">Let's work<br /><em>together</em></h2>
+        <a href="mailto:[EMAIL_ADDRESS]" class="btn btn-large">
+          <span>Start a Project</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-left">
+          <span>© 2026 Wizard's Studio</span>
+          <span>Designed & Built by WizardX</span>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="social-link">GitHub</a>
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">Twitter</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ============ MOBILE MENU OVERLAY ============ -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu-bg"></div>
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-links">
+        <div class="mobile-menu-link-wrap">
+          <a href="#work" class="mobile-menu-link">Work</a>
+        </div>
+        <div class="mobile-menu-link-wrap">
+          <a href="#about" class="mobile-menu-link">About</a>
+        </div>
+        <div class="mobile-menu-link-wrap">
+          <a href="#services" class="mobile-menu-link">Services</a>
+        </div>
+        <div class="mobile-menu-link-wrap">
+          <a href="#contact" class="mobile-menu-link">Contact</a>
+        </div>
+      </div>
+      <div class="mobile-menu-footer">
+        <span class="mobile-menu-tagline">Crafting Digital Experiences</span>
+        <div class="mobile-menu-socials">
+          <a href="#" class="mobile-social-link">GitHub</a>
+          <a href="#" class="mobile-social-link">LinkedIn</a>
+          <a href="#" class="mobile-social-link">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
